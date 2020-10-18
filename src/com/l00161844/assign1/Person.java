@@ -9,18 +9,26 @@ public abstract class Person {
     private String name;
     private int age;
 
+    /**
+     * default constructor
+     */
     public Person(){
         name = "Don't know";
         age = 0;
     }
 
+    /**
+     * initialize all person instance fields
+     * @param n the person name
+     * @param a the person age
+     */
     public Person(String n, int a){
         name = n;
         age = a;
     }
 
     /**
-     * Getter
+     *
      * @return the person age
      */
     public int getAge() {
@@ -31,7 +39,7 @@ public abstract class Person {
      *
      * @return the person description
      */
-    abstract String getDescription();
+    public abstract String getDescription();
 
     /**
      *
