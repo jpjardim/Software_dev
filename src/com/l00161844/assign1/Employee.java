@@ -14,6 +14,7 @@ public class Employee extends Person implements Comparable<Employee> {
     public Employee(){
         super();
         salary = 0.0;
+        idGenerator++;
     }
 
     /**
@@ -25,6 +26,7 @@ public class Employee extends Person implements Comparable<Employee> {
     public Employee(String n, int a, double s){
         super(n,a);
         salary = s;
+        idGenerator++;
     }
 
     /**
@@ -49,9 +51,7 @@ public class Employee extends Person implements Comparable<Employee> {
      */
     @Override
     public String getDescription() {
-        return "Employee name: " + this.getName() +
-                " age: " + this.getAge() +
-                " salary: " + this.salary;
+        return "name: " + getName() + " age: " + getAge() + " salary: " + getSalary();
     }
 
     /**
